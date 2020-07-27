@@ -167,21 +167,17 @@ set psdir
 set fit brief errorvariables nocovariancevariables errorscaling prescale nowrap v5
 GNUTERM = "qt"
 x = 0.0
-set label 1 "New cases" at "20200319", 100.0000, 0.00000 right norotate back textcolor lt 1  nopoint
+set label 1 "New cases" at "20200329", 400.0000, 0.00000 left norotate back textcolor lt 1  nopoint
 set label 2 "New tests" at "20200401", 15000.00, 0.00000 right norotate back textcolor lt 2  nopoint
-set label 3 "New deaths" at "20200322", 2, 0.00000 right norotate back textcolor lt 3  nopoint
-set label 4 "Hospitalized" at "20200414",3794 right norotate textcolor lt 4 nopoint
-set label 6 "new LTCF cases" at "20200403",100 right rotate by 20 textcolor lt 6 nopoint
-set label 7 "ICU" at "20200419",1000 right norotate textcolor lt 7 nopoint
-set label 8 "new LTCF deaths" at "20200430",50 right norotate textcolor lt 8 nopoint
+set label 3 "New deaths" at "20200410", 20, 0.00000 left norotate back textcolor lt 3  nopoint
+#set label 4 "Hospitalized" at "20200414",3794 right norotate textcolor lt 4 nopoint
+#set label 6 "new LTCF cases" at "20200403",100 right rotate by 20 textcolor lt 6 nopoint
+#set label 7 "ICU" at "20200419",1000 right norotate textcolor lt 7 nopoint
+#set label 8 "new LTCF deaths" at "20200430",50 right norotate textcolor lt 8 nopoint
 set label 99 "Lines are 7-day trailing averages" at "20200402",2 left norotate nopoint
-set title "SARS2 new cases, hospitalizations, tests, and deaths in Massachusetts" 
+set title "SARS2 new cases, tests, and deaths in Massachusetts" 
 ## Last datafile plotted: "< ./trailing-average < covid.data"
 plot "< ./trailing-average < covid.data" using 1:4 notitle, "" using 1:5 with lines lt 1 notitle,\
      "" using 1:7 lt 2 notitle , "" using 1:8 with lines lt 2 notitle, \
-     "" using 1:10 lt 3 notitle , "" using 1:11 with lines lt 3 notitle, \
-     "" using 1:12 lt 4 notitle , "" using 1:13 with lines lt 4 notitle, \
-     "" using 1:15 lt 6 notitle , "" using 1:16 with lines lt 6 notitle, \
-     "" using 1:17 lt 7 notitle , "" using 1:18 with lines lt 7 notitle, \
-     "" using 1:20 lt 8 notitle , "" using 1:21 with lines lt 8 notitle
+     "" using 1:10 lt 3 notitle , "" using 1:11 with lines lt 3 notitle
 #    EOF
