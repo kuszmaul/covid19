@@ -176,8 +176,8 @@ set label 7 "ICU" at "20200419",1000 right norotate textcolor lt 7 nopoint
 set label 8 "new LTCF deaths" at "20200430",50 right norotate textcolor lt 8 nopoint
 set label 99 "Lines are 7-day trailing averages" at "20200402",2 left norotate nopoint
 set title "SARS2 new cases, hospitalizations, tests, and deaths in Massachusetts" 
-## Last datafile plotted: "< ./trailing-average < ../covid.data"
-plot "< ./trailing-average < ../covid.data" using 1:4 notitle, "" using 1:5 with lines lt 1 notitle,\
+## Last datafile plotted: "< ./trailing-average < covid.data"
+plot "< ./trailing-average < covid.data" using 1:4 notitle, "" using 1:5 with lines lt 1 notitle,\
      "" using 1:7 lt 2 notitle , "" using 1:8 with lines lt 2 notitle, \
      "" using 1:10 lt 3 notitle , "" using 1:11 with lines lt 3 notitle, \
      "" using 1:12 lt 4 notitle , "" using 1:13 with lines lt 4 notitle, \

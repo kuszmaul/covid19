@@ -166,9 +166,9 @@ set psdir
 set fit brief errorvariables nocovariancevariables errorscaling prescale nowrap v5
 GNUTERM = "qt"
 f(x) = a*x+b
-fit [46:*] f(x)  "< ./trailing-average < ../covid.data" using 2:10 via a,b
+fit [46:*] f(x)  "< ./trailing-average < covid.data" using 2:10 via a,b
 g(x) = c*x+d
-fit [46:*] g(x) "< ./trailing-average < ../covid.data" using 2:(log($10)) via c,d
+fit [46:*] g(x) "< ./trailing-average < covid.data" using 2:(log($10)) via c,d
 
 day_of_3 = 143+(log(3)-g(143))/c
 
@@ -179,8 +179,8 @@ set label 99 "3 deaths/day" at day_of_3-10,2 right offset character 0,-0.5
 set xtics   ("3/11" 1.00000, "4/25" 46.0000, "5/30" 81.0000, "6/12" 94.0000, sprintf("8/%d", day_of_3-143) floor(day_of_3))
 
 
-## Last datafile plotted: "< ./trailing-average < ../covid.data"
-plot "< ./trailing-average < ../covid.data" using 2:10 notitle,                                            \
+## Last datafile plotted: "< ./trailing-average < covid.data"
+plot "< ./trailing-average < covid.data" using 2:10 notitle,                                            \
      ""                                     using 2:23 with lines lt 1 title "Deaths 7-day geo average", \
      [46:*] exp(g(x)) title sprintf("Exponential fit %.2f%%/day.  3 deaths/day on Aug %d", 100*(1-exp(c)), floor((log(3)-g(143))/c)) lt 4
 ## 

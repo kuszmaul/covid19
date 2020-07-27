@@ -175,10 +175,10 @@ FIT_P = 0.0
 FIT_NITER = 4
 a_err = 4.56767214860312
 b_err = 293.902876372366
-## Last datafile plotted: "< ./trailing-average < ../covid.data"
-fit [46:*] f(x) "< ./trailing-average < ../covid.data" using 2:4 via a,b
+## Last datafile plotted: "< ./trailing-average < covid.data"
+fit [46:*] f(x) "< ./trailing-average < covid.data" using 2:4 via a,b
 g(x) = c*x+d
-fit [46:*] g(x) "< ./trailing-average < ../covid.data" using 2:(log($4)) via c,d
+fit [46:*] g(x) "< ./trailing-average < covid.data" using 2:(log($4)) via c,d
 
 june_zero = -b/a-82
 hour_zero = 24*(june_zero-floor(june_zero))
@@ -210,7 +210,7 @@ set log y2
 
 #set label 1 sprintf("Linear: zero intercept June %d %02d:%02d EDT", floor(june_zero), floor(hour_zero), floor(minute_zero)) at  5, 3000
 #set label 2 sprintf("Exponential: predicts %.0f cases on June %d", floor(june_zero), exp(g(-b/a))) at 5,2700
-plot "< ./trailing-average < ../covid.data" using 2:22 with lines title "new cases 7-day geometric average",  \
+plot "< ./trailing-average < covid.data" using 2:22 with lines title "new cases 7-day geometric average",  \
      "" using 2:4 notitle                                                                              
 #     ,[46:*] exp(g(x)) title sprintf("exponential decay best fit %.2f%%/day", 100*(1-exp(c))) lt 4
 

@@ -173,6 +173,6 @@ set log y
 set yrange [10:5000]
 set ytics (50,100,200,500,1000,2000,3000,4000)
 #set ytics add (560,1089,2108,3977)
-## Last datafile plotted: "< ./trailing-average < ../covid.data"
-plot "< ./trailing-average < ../covid.data" using 1:12 lt 4 notitle , "" using 1:13 with lines lt 4 notitle,      "" using 1:17 lt 7 notitle , "" using 1:18 with lines lt 7 notitle
+## Last datafile plotted: "< ./trailing-average < covid.data"
+plot "< ./trailing-average < covid.data" using 1:12 lt 4 notitle , "" using 1:13 with lines lt 4 notitle,      "" using 1:17 lt 7 notitle , "" using 1:18 with lines lt 7 notitle
 #    EOF
